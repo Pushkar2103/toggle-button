@@ -1,0 +1,43 @@
+div input {
+    display: none;
+}
+
+#txt {
+    height: 80vh;
+    gap: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div label {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: #555;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background 220ms linear;
+}
+
+div label::before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: left 220ms linear;
+}
+
+div input:checked + label{
+    background: #999999;
+}
+
+div input:checked + label::before{
+    left: 56px;
+}
